@@ -1,14 +1,13 @@
-/* Configuración extra para Tailwind */
+/* Configuración de Tailwind y Base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Suavizado de scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Tipografías personalizadas */
+/* Tipografías */
 h1, h2, h3, .font-bebas {
     font-family: 'Bebas Neue', cursive;
 }
@@ -17,22 +16,39 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Efectos de Glassmorphism */
-.glass-card {
-    background: rgba(26, 26, 29, 0.8);
-    backdrop-filter: blur(10px);
+/* Animaciones de entrada (Página Viva) */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Animación del Navbar al hacer scroll */
-.nav-scrolled {
-    background: rgba(75, 44, 127, 0.9);
-    backdrop-filter: blur(10px);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+.section-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto de Vidrio (Glassmorphism) */
+.glass-nav {
+    background: rgba(26, 26, 29, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(217, 160, 54, 0.1);
 }
 
 /* Neón para botones */
+.btn-neon {
+    position: relative;
+    z-index: 1;
+}
+
 .btn-neon:hover {
-    box-shadow: 0 0 15px #FF7A2D, 0 0 30px #FF7A2D;
+    box-shadow: 0 0 20px #FF7A2D, 0 0 40px rgba(255, 122, 45, 0.5);
+}
+
+/* Personalización del Selector (Browser Reset) */
+select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 1.5rem;
 }

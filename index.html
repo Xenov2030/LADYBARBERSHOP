@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lady Barbershop | Patricia Díaz</title>
+    <title>Lady Barbershop | Patricia Díaz - Estilista & Barbera</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,100 +13,170 @@
 
     <header class="fixed w-full z-50 transition-all duration-300 px-6 py-4" id="navbar">
         <nav class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-['Bebas_Neue'] tracking-widest text-[#FF7A2D]">
-                LADY BARBERSHOP
-            </div>
-            <ul class="hidden md:flex space-x-8 font-bold uppercase text-sm tracking-widest">
+            <a href="#home" class="transition hover:scale-105 duration-300">
+                <img src="logo.png" alt="Lady Barbershop Logo" class="h-14 md:h-20 w-auto object-contain">
+            </a>
+            
+            <ul class="hidden md:flex space-x-8 font-bold uppercase text-sm tracking-widest items-center" id="nav-menu">
                 <li><a href="#home" class="hover:text-[#FF7A2D] transition">Inicio</a></li>
                 <li><a href="#historia" class="hover:text-[#FF7A2D] transition">Historia</a></li>
                 <li><a href="#servicios" class="hover:text-[#FF7A2D] transition">Servicios</a></li>
+                <li><a href="#reservas" class="text-[#D9A036] hover:text-[#FF7A2D] transition">Pedir Turno</a></li>
+                <li><a href="#clientes" class="hover:text-[#FF7A2D] transition">Clientes</a></li>
                 <li><a href="#contacto" class="hover:text-[#FF7A2D] transition">Contacto</a></li>
             </ul>
+
             <button class="md:hidden text-white" id="menu-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+                <i class="fas fa-bars text-3xl"></i>
             </button>
         </nav>
     </header>
 
-    <section id="home" class="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#4B2C7F] via-[#1A1A1D] to-[#1A1A1D]">
-        <div class="text-center px-4 z-10">
-            <h1 class="font-['Bebas_Neue'] text-6xl md:text-8xl mb-4 text-white leading-tight">
-                Donde la tradición urbana <br> <span class="text-[#FF7A2D]">se funde con el arte.</span>
+    <section id="home" class="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#4B2C7F] via-[#1A1A1D] to-black">
+        <div class="text-center px-4 z-10 hero-content opacity-0 translate-y-10 transition duration-1000">
+            <h1 class="font-['Bebas_Neue'] text-6xl md:text-9xl mb-4 text-white leading-tight tracking-tighter">
+                DONDE EL RIGOR URBANO <br> <span class="text-[#FF7A2D]">SE FUNDE CON EL ARTE.</span>
             </h1>
-            <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-8">
-                Más de 15 años transformando identidades. La maestría técnica de Patricia Díaz redefine tu imagen con un estilo exclusivo y sin género.
+            <p class="max-w-3xl mx-auto text-lg md:text-2xl text-gray-300 mb-10 font-light italic">
+                Más de 15 años transformando identidades. La maestría de Patricia Díaz redefine tu imagen.
             </p>
-            <a href="#contacto" class="inline-block bg-[#FF7A2D] text-[#1A1A1D] font-bold px-10 py-4 rounded-lg hover:shadow-[0_0_20px_rgba(255,122,45,0.6)] transition-all transform hover:-translate-y-1">
-                RESERVAR CITA
-            </a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#reservas" class="inline-block bg-[#FF7A2D] text-black font-bold px-12 py-5 rounded-full hover:shadow-[0_0_30px_rgba(255,122,45,0.8)] transition-all transform hover:-translate-y-1 btn-neon uppercase tracking-widest text-sm">
+                    RESERVAR AHORA
+                </a>
+                <a href="#servicios" class="inline-block border border-[#D9A036] text-[#D9A036] font-bold px-12 py-5 rounded-full hover:bg-[#D9A036] hover:text-black transition-all text-sm tracking-widest">
+                    VER SERVICIOS
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="historia" class="py-24 px-6 bg-[#1A1A1D]">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="border-2 border-[#D9A036] p-2 rounded-2xl">
-                <div class="bg-gray-800 h-[500px] rounded-xl flex items-center justify-center">
-                    <span class="text-gray-500 uppercase tracking-widest font-bold text-center p-4">Foto de Patricia Díaz <br> (Desde 2007)</span>
+    <section id="historia" class="py-32 px-6 bg-[#1A1A1D] section-reveal">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-[#FF7A2D]"></div>
+                <div class="bg-gray-800 h-[600px] rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl border border-[#D9A036]/30">
+                    <span class="text-gray-500 font-['Bebas_Neue'] text-2xl">Imagen de Patricia Díaz</span>
                 </div>
+                <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-[#D9A036]"></div>
             </div>
             <div>
-                <h2 class="font-['Bebas_Neue'] text-5xl text-[#D9A036] mb-6 tracking-wide">La Maestría detrás del Sillón</h2>
-                <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
-                    <p>La historia de Lady Barbershop comenzó en 2007. Patricia Díaz se graduó como peluquera, estilista y colorista en tiempo récord, demostrando que la excelencia no es negociable.</p>
-                    <p>Tras 14 años perfeccionando el arte de la colorimetría y con el orgullo de ser madre de cuatro hijos, en 2021 Patricia conquistó el mundo de la barbería para ofrecer una versatilidad total.</p>
-                    <p>Lady Barbershop es el reflejo de una mujer que sabe que los detalles lo son todo. Casi dos décadas de experiencia a tu disposición.</p>
+                <h2 class="font-['Bebas_Neue'] text-6xl text-[#D9A036] mb-8 tracking-widest">LA MAESTRÍA <br><span class="text-white">DESDE 2007</span></h2>
+                <div class="space-y-6 text-gray-300 leading-relaxed text-xl font-light">
+                    <p>Patricia Díaz se graduó como peluquera, estilista y colorista en tiempo récord, demostrando que la excelencia no es negociable.</p>
+                    <p>Tras 14 años perfeccionando el arte de la colorimetría y siendo madre de cuatro hijos, en 2021 conquistó el mundo de la barbería para ofrecer una versatilidad total.</p>
+                    <p class="text-white font-bold">"Lady Barbershop es el reflejo de una mujer que sabe que los detalles lo son todo."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="py-24 px-6 bg-[#4B2C7F]/10">
+    <section id="servicios" class="py-32 px-6 bg-black/50 section-reveal">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-['Bebas_Neue'] text-5xl text-center mb-16 tracking-widest text-white">Nuestros Servicios</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#1A1A1D]/80 backdrop-blur-md border border-[#D9A036]/30 p-8 rounded-2xl hover:border-[#FF7A2D] transition group">
-                    <div class="text-[#FF7A2D] mb-6 group-hover:scale-110 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758L5 19m0-14l4.121 4.121" />
-                        </svg>
+            <h2 class="font-['Bebas_Neue'] text-6xl text-center mb-20 tracking-widest text-white">NUESTRAS <span class="text-[#FF7A2D]">ESPECIALIDADES</span></h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-[#1A1A1D] border border-[#D9A036]/20 p-10 rounded-3xl hover:border-[#FF7A2D] transition group relative overflow-hidden">
+                    <div class="text-[#FF7A2D] mb-8 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-razor h-14 w-14"></i>
                     </div>
-                    <h3 class="font-['Bebas_Neue'] text-3xl mb-4 text-white">Barbería Urbana</h3>
-                    <p class="text-gray-400">Cortes de autor, perfilado de barba a navaja y técnicas de vanguardia donde la tradición se une a la calle.</p>
+                    <h3 class="font-['Bebas_Neue'] text-4xl mb-4 text-white tracking-wide">Barbería Urbana</h3>
+                    <p class="text-gray-400 text-lg">Cortes de autor, perfilado de barba a navaja y técnicas de vanguardia donde la calle dicta el estilo.</p>
                 </div>
-                <div class="bg-[#1A1A1D]/80 backdrop-blur-md border border-[#D9A036]/30 p-8 rounded-2xl hover:border-[#FF7A2D] transition group">
-                    <div class="text-[#FF7A2D] mb-6 group-hover:scale-110 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                        </svg>
+                <div class="bg-[#1A1A1D] border border-[#D9A036]/20 p-10 rounded-3xl hover:border-[#FF7A2D] transition group relative overflow-hidden">
+                    <div class="text-[#FF7A2D] mb-8 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-scissors h-14 w-14"></i>
                     </div>
-                    <h3 class="font-['Bebas_Neue'] text-3xl mb-4 text-white">Estilismo & Diseño</h3>
-                    <p class="text-gray-400">Arquitectura capilar integral para potenciar tus facciones. Diseño de imagen que es tu mejor accesorio.</p>
+                    <h3 class="font-['Bebas_Neue'] text-4xl mb-4 text-white tracking-wide">Estilismo & Diseño</h3>
+                    <p class="text-gray-400 text-lg">Arquitectura capilar personalizada para potenciar tus mejores rasgos con un acabado profesional.</p>
                 </div>
-                <div class="bg-[#1A1A1D]/80 backdrop-blur-md border border-[#D9A036]/30 p-8 rounded-2xl hover:border-[#FF7A2D] transition group">
-                    <div class="text-[#FF7A2D] mb-6 group-hover:scale-110 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                        </svg>
+                <div class="bg-[#1A1A1D] border border-[#D9A036]/20 p-10 rounded-3xl hover:border-[#FF7A2D] transition group relative overflow-hidden">
+                    <div class="text-[#FF7A2D] mb-8 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-palette h-14 w-14"></i>
                     </div>
-                    <h3 class="font-['Bebas_Neue'] text-3xl mb-4 text-white">Colorimetría Experta</h3>
-                    <p class="text-gray-400">Ciencia y arte en cada tono. Balayage técnico y colores vibrantes garantizando salud capilar absoluta.</p>
+                    <h3 class="font-['Bebas_Neue'] text-4xl mb-4 text-white tracking-wide">Colorimetría</h3>
+                    <p class="text-gray-400 text-lg">Ciencia aplicada al color. Balayages, tinturas técnicas y salud capilar bajo maestría experta.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="py-12 border-t border-gray-800 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-['Bebas_Neue'] text-3xl text-[#FF7A2D] mb-4">Lady Barbershop</h2>
-            <p class="italic text-gray-400 mb-8">"Maestría en cada trazo, autoridad en cada estilo."</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
-                <a href="#" class="text-gray-400 hover:text-white transition">WhatsApp</a>
-                <a href="#" class="text-gray-400 hover:text-white transition">Ubicación</a>
+    <section id="reservas" class="py-32 px-6 bg-[#1A1A1D] section-reveal">
+        <div class="max-w-5xl mx-auto bg-gradient-to-b from-[#4B2C7F]/30 to-black p-12 rounded-[40px] border border-[#D9A036]/30 shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="font-['Bebas_Neue'] text-6xl text-center mb-12 text-[#FF7A2D] tracking-widest uppercase">Agenda tu turno</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <label class="block text-[#D9A036] font-bold uppercase text-sm tracking-widest">¿Qué servicio necesitas?</label>
+                        <select id="servicio-select" class="w-full bg-black border border-gray-700 p-5 rounded-2xl text-white focus:border-[#FF7A2D] outline-none transition appearance-none">
+                            <option value="Corte de Barbería / Estilismo">Corte Masculino / Femenino</option>
+                            <option value="Tintura y Colorimetría">Tintura / Color</option>
+                            <option value="Alisado Técnico">Alisados (Consultar)</option>
+                            <option value="Peinado para Evento">Peinados</option>
+                            <option value="Paquete Completo Personalizado">Armar un Paquete Especial</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button onclick="enviarWhatsApp()" class="w-full bg-[#FF7A2D] text-black font-bold py-5 rounded-2xl hover:shadow-[0_0_40px_rgba(255,122,45,1)] transition-all duration-500 uppercase tracking-widest btn-neon">
+                            <i class="fab fa-whatsapp mr-2"></i> Consultar por WhatsApp
+                        </button>
+                    </div>
+                </div>
             </div>
-            <p class="mt-8 text-xs text-gray-600 tracking-widest">&copy; 2024 Creado por Nicolás Aguirre para Patricia Díaz.</p>
+        </div>
+    </section>
+
+    <section id="clientes" class="py-32 px-6 bg-black/30 section-reveal">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-['Bebas_Neue'] text-5xl text-center mb-20 text-white tracking-widest uppercase">Testimonios Reales</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="aspect-[9/16] bg-[#1A1A1D] rounded-3xl overflow-hidden border border-[#D9A036]/20 flex items-center justify-center group relative">
+                    <div class="absolute inset-0 bg-[#FF7A2D]/10 group-hover:bg-transparent transition"></div>
+                    <i class="fab fa-instagram text-6xl text-gray-700"></i>
+                    <p class="absolute bottom-6 text-xs uppercase tracking-widest text-gray-500">Video de Instagram</p>
+                </div>
+                <div class="bg-[#1A1A1D] p-10 rounded-3xl border-t-4 border-[#FF7A2D] flex flex-col justify-between">
+                    <p class="italic text-gray-300 text-xl leading-relaxed mb-8">"Llevo años atendiéndome con Patricia. Su técnica de color es insuperable y la nueva barbería quedó increíble."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-[#D9A036] rounded-full"></div>
+                        <span class="font-bold text-[#D9A036]">Laura M.</span>
+                    </div>
+                </div>
+                <div class="bg-[#1A1A1D] p-10 rounded-3xl border-t-4 border-[#FF7A2D] flex flex-col justify-between">
+                    <p class="italic text-gray-300 text-xl leading-relaxed mb-8">"Un lugar con mucha onda. Patricia domina el estilo urbano a la perfección. 100% recomendado."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-[#4B2C7F] rounded-full"></div>
+                        <span class="font-bold text-[#D9A036]">Cristian G.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-24 bg-black border-t border-[#4B2C7F]/20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
+            <div class="text-left">
+                <h3 class="font-['Bebas_Neue'] text-4xl text-[#D9A036] mb-6 tracking-widest">Horarios</h3>
+                <ul class="text-gray-400 space-y-3 text-lg">
+                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Martes a Viernes</span> <span class="text-white font-bold">16:00 - 20:00</span></li>
+                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Sábados</span> <span class="text-white font-bold">10:00 - 20:00</span></li>
+                    <li class="flex justify-between text-red-900"><span>Domingos y Lunes</span> <span>Cerrado</span></li>
+                </ul>
+            </div>
+            <div class="text-center flex flex-col items-center">
+                <img src="logo.png" alt="Lady Barbershop" class="h-24 mb-6 transition hover:scale-110 duration-500">
+                <p class="text-gray-500 italic max-w-xs text-sm">"Maestría en cada trazo, autoridad en cada estilo desde 2007."</p>
+            </div>
+            <div class="flex flex-col md:items-end items-center space-y-8">
+                <h3 class="font-['Bebas_Neue'] text-4xl text-[#D9A036] tracking-widest">Conectamos</h3>
+                <div class="flex space-x-8 text-4xl">
+                    <a href="#" class="text-pink-600 hover:scale-125 transition duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-blue-600 hover:scale-125 transition duration-300"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/5491122334455" class="text-green-500 hover:scale-125 transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 text-center text-xs text-gray-700 uppercase tracking-[0.5em] border-t border-gray-900 pt-10 px-4">
+            Diseño & Desarrollo por Nicolás Aguirre &copy; 2024
         </div>
     </footer>
 
