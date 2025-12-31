@@ -1,0 +1,38 @@
+/* Configuración extra para Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Suavizado de scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tipografías personalizadas */
+h1, h2, h3, .font-bebas {
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Efectos de Glassmorphism */
+.glass-card {
+    background: rgba(26, 26, 29, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* Animación del Navbar al hacer scroll */
+.nav-scrolled {
+    background: rgba(75, 44, 127, 0.9);
+    backdrop-filter: blur(10px);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Neón para botones */
+.btn-neon:hover {
+    box-shadow: 0 0 15px #FF7A2D, 0 0 30px #FF7A2D;
+}
